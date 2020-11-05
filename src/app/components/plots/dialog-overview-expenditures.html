@@ -1,0 +1,51 @@
+<style>
+    h2 {
+        margin-top: 1px;
+        margin-bottom: 1px;
+        text-align: center;
+    }
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      border-width: 15px;
+      width: 100%;
+    }
+
+    .td2,th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    .td1 {
+        border: 1px solid #dddddd;
+        padding: 8px;
+        text-align: right;
+        padding-right: 20px;
+        margin-right: 0px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+</style>
+
+<h2>Szczegóły wydatków</h2>
+
+<table>
+<tr>
+    <th>Kategoria wydatku</th>
+    <th>Całkowity koszt</th>
+</tr>
+<tr><td class="td2">{{categories[0]}}</td><td class="td1">{{costs[0]}} zł.</td></tr>
+<tr><td class="td2">{{categories[1]}}</td><td class="td1">{{costs[1]}} zł.</td></tr>
+<tr><td class="td2">{{categories[2]}}</td><td class="td1">{{costs[2]}} zł.</td></tr>
+<tr><td class="td2">{{categories[3]}}</td><td class="td1">{{costs[3]}} zł.</td></tr>
+<tr><td class="td2">{{categories[4]}}</td><td class="td1">{{costs[4]}} zł.</td></tr>
+<tr><td class="td2">{{categories[5]}}</td><td class="td1">{{costs[5]}} zł.</td></tr>
+<tr><td class="td2">{{categories[6]}}</td><td class="td1">{{costs[6]}} zł.</td></tr>
+<tr><td class="td2">{{categories[7]}}</td><td class="td1">{{costs[7]}} zł.</td></tr>
+<!-- <tr *ngFor = "let i of categories"><td>{{categories[i]}}</td></tr> -->
+</table>
+<div mat-dialog-actions>
+    <button mat-button color="primary" (click)="onNoClick()">Dziękuje</button>
+</div>

@@ -1,0 +1,20 @@
+<div class="nav">
+<mat-nav-list>
+  <mat-list routerLinkActive="active-link" *ngFor="let menuItem of menuItems; let index = index" class="nav-item" (click)="showSubItem(index)">
+        <mat-list-item>
+            <i class="material-icons">{{menuItem.icon}}</i>
+            <strong class="text">{{menuItem.title}}</strong>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list style="margin-left:30px;" routerLinkActive="active-link" *ngIf="visibleIndex === index">
+          <div *ngFor="let subItem of menuItem.subItems">
+            <mat-list-item>
+              <a class="nav-link" [routerLink]="[subItem.path]">
+              <li><strong>{{ subItem.name }}</strong></li>
+              </a>
+            </mat-list-item>
+          </div>
+        </mat-list>
+  </mat-list>
+</mat-nav-list>
+</div>

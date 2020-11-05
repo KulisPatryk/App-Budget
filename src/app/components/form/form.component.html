@@ -1,0 +1,88 @@
+<div>
+<div class="two-forms">
+  <div class="mat-elevation-z8">
+    <h2>Wprowadzenie wydatków</h2>
+    <div class="row">
+        <mat-form-field floatLabel="auto" hideRequiredMarker appearance="outline">
+            <mat-label>Nazwa wydatku</mat-label>
+            <input [(ngModel)]="expenditure.name" matInput required/>
+        </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-form-field floatLabel="auto" hideRequiredMarker appearance="outline">
+            <mat-label>Kwota wydatku</mat-label>
+            <input [(ngModel)]="expenditure.price" matInput required/>
+        </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-form-field floatLabel="auto" hideRequiredMarker appearance="outline">
+            <mat-label>Miejsce</mat-label>
+            <input [(ngModel)]="expenditure.place" matInput required/>
+        </mat-form-field>
+      </div>
+    <div class="row">
+      <mat-form-field>
+        <mat-label>Kategoria</mat-label>
+        <mat-select [(ngModel)]="expenditure.category">
+          <mat-option>Brak</mat-option>
+          <mat-option *ngFor="let category of categories" [value]="category">{{category}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="row">
+          <mat-form-field appearance="fill">
+                <mat-label>Wybierz datę</mat-label>
+                <input matInput [matDatepicker]="picker" [(ngModel)]="expenditure.date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        <button (click)="sendData()" mat-raised-button color="primary">Wprowadź dane</button>
+    </div>
+  </div>
+  <div class="mat-elevation-z8">
+      <h2>Wprowadzenie dochodów</h2>
+      <div class="row">
+          <mat-form-field floatLabel="auto" hideRequiredMarker appearance="outline">
+              <mat-label>Nazwa dochodu</mat-label>
+              <input [(ngModel)]="income.name" matInput required/>
+          </mat-form-field>
+      </div>
+      <div class="row">
+          <mat-form-field floatLabel="auto" hideRequiredMarker appearance="outline">
+              <mat-label>Kwota</mat-label>
+              <input [(ngModel)]="income.price" matInput required/>
+          </mat-form-field>
+      </div>
+      <div class="row" style="margin-bottom: 10px; margin-top: 12px;">
+          <mat-form-field>
+            <mat-label>Kto zarobił?</mat-label>
+            <mat-select [(ngModel)]="income.category">
+              <mat-option>Brak</mat-option>
+              <mat-option [value]="names[0]">Patryk</mat-option>
+              <mat-option [value]="names[1]">Basia</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field>
+              <mat-label>Rodzaj dochodu</mat-label>
+              <mat-select [(ngModel)]="income.kind">
+                <mat-option>Brak</mat-option>
+                <mat-option *ngFor="let category of categoriesIncome" [value]="category">{{category}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+      <div class="row">
+            <mat-form-field appearance="fill">
+              <mat-label>Wybierz datę</mat-label>
+              <input matInput [matDatepicker]="picker1" [(ngModel)]="income.date">
+              <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+              <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+      </div>
+      <div class="row">
+        <button (click)="sendIncomeData()" mat-raised-button color="primary">Wprowadź dane</button>
+      </div>
+  </div>
+</div>
+</div>

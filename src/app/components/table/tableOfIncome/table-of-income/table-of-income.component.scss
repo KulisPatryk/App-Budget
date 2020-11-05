@@ -1,0 +1,53 @@
+mat-form-field{
+    height: 50px;
+    margin-left: 20px;
+    background-color: #ADD8E6;
+  }
+  th.mat-sort-header-sorted {
+    color: black;
+  }
+  .filtering {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .mat-elevation-z8 {
+    margin: 0px 20px 15px 15px;
+  }
+  table{
+    // margin-top: 10px;
+    width:90%;
+    border-radius: 15px;
+
+  }
+
+  th {
+    // margin-top: 10px;
+    background-color: #ADD8E6;
+    color: black;
+    font-size: 20px;
+    border: 10px;
+  }
+  td{
+    background-color: #E6E6FA;
+    font-size: 15px;
+    border-bottom: black;
+  }
+  mat-paginator {
+    width: 90%;
+    background-color: #ADD8E6;
+    font-size: 15px;
+    padding: 0px;
+
+  }
+  .mat-column-date {
+     width: 15%;
+  }
+  .mat-column-delete {
+    width: 3%;
+  }
+  .mat-column-dialog {
+    width: 5%;
+  }
+  .mat-column-price {
+    width: 10%;
+  }

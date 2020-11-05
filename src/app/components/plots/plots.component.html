@@ -1,0 +1,59 @@
+<div class="flex">
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Lokata</mat-card-title>
+      <mat-card-subtitle>Lokaty do 08.04.2021</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content >
+      <p><strong>20 000 złotych</strong></p>
+    </mat-card-content>
+    <mat-divider></mat-divider>
+    <mat-card-header>
+        <mat-card-title>Gotówka</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p><strong>9 700 złotych</strong></p>
+    </mat-card-content>
+    <mat-card-footer>Stan na dzień 27.10.2020</mat-card-footer>
+</mat-card>
+<mat-card class="example-card1">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image1"></div>
+      <mat-card-title>Aktualny stan konta</mat-card-title>
+      <mat-card-subtitle>dane ręcznie wprowadzone</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="class1">
+      <p style="font-size: 28px;"><strong>{{actual | number:'1.2'}} złotych</strong></p>
+    </mat-card-content>
+    <!-- <mat-card-actions>
+      <button (click)="actualMoney()"mat-button>Sprawdź szczegóły</button>
+    </mat-card-actions> -->
+</mat-card>
+<mat-card class="example-card2">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image2"></div>
+      <mat-card-title>Wydatki</mat-card-title>
+      <mat-card-subtitle>Pazdziernik</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="class1">
+            <p  style="font-size: 28px;"><strong>{{costOctober | number:'1.2'}} złotych</strong></p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button (click)="openDialog()" mat-button>Szczegóły wydatków</button>
+    </mat-card-actions>
+</mat-card>
+<mat-card class="example-card3">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image3"></div>
+          <mat-card-title>Dochody</mat-card-title>
+          <mat-card-subtitle>Pazdziernik</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="class1">
+          <p style="font-size: 28px;"><strong>{{incomeOctober | number:'1.2'}} złotych </strong></p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button (click)="openDialogIncome()" mat-button>Szczegóły dochodów</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

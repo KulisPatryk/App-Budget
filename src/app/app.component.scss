@@ -1,0 +1,33 @@
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #FAEBD7;
+}
+mat-sidenav {
+  width: 15%;
+  background:#FAEBD7;
+  text-decoration: none;
+}
+h3,h1 {
+  text-align: center;
+}
+.nav-link{
+  height: 60px;
+  margin: 2px;
+  color: black;
+  text-decoration-line: none;
+}
+.header{
+  height: 70px;
+}
+.body {
+  height: 900px;
+  background-image: url(./images/back.jpg);
+}
+.title{
+  margin-left: 15px;
+  height: 50px;
+}
