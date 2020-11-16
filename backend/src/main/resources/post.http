@@ -1,0 +1,6 @@
+POST http://localhost:8080/expenditures/all
+Content-Type: application/json
+
+
+{"name":"Test","price":10.4,"place":"Lidl","category":"Spożywka","date":"10/10/2020"}
+###
